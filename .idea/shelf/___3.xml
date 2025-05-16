@@ -1,0 +1,13 @@
+<changelist name="在变基之前未提交的更改_[更改]3" date="1747408101180" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/在变基之前未提交的更改_[更改]3/shelved.patch" />
+  <option name="DESCRIPTION" value="在变基之前未提交的更改 [更改]" />
+  <binary>
+    <option name="BEFORE_PATH" value="ffprobe.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ffplay.exe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="ffmpeg.exe" />
+  </binary>
+</changelist>
