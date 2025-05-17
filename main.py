@@ -5,6 +5,7 @@ from typing import *
 from openai import OpenAI
 
 import tracemalloc
+
 tracemalloc.start()
 
 import edge_tts
@@ -17,7 +18,6 @@ import blivedm.models.web as web_models
 
 import pygame
 from pydub import AudioSegment  # 添加 pydub 的导入
-
 
 # 直播间ID的取值看直播间URL
 TEST_ROOM_IDS = [
@@ -41,9 +41,6 @@ def init_session():
 
 
 async def run_single_client():
-    """
-    演示监听一个直播间
-    """
     room_id = random.choice(TEST_ROOM_IDS)
     client = blivedm.BLiveClient(room_id, session=session)
     handler = Handler()
@@ -56,18 +53,27 @@ async def run_single_client():
     finally:
         await client.stop_and_close()
 
+
 class Handler(blivedm.BaseHandler):
     def _on_heartbeat(self, client: blivedm.BLiveClient, message: web_models.HeartbeatMessage):
         print(f'[{client.room_id}] heartbeat')
 
     def _on_danmaku(self, client: blivedm.BLiveClient, message: web_models.DanmakuMessage):
         print(f'[{client.room_id}] {message.uname}：{message.msg}')
+
         # 将弹幕消息传递给外部处理函数
-        asyncio.create_task(process_danmu(message.msg))
+        # 如果检测到消息第一位是"$"
+        for i in message.msg:
+            if i != "$":
+                asyncio.create_task(process_danmu(f"{message.uname}说:{message.msg}"))
+                break
+            if i == "$":
+                break
 
     def _on_gift(self, client: blivedm.BLiveClient, message: web_models.GiftMessage):
         print(f'[{client.room_id}] {message.uname} 赠送{message.gift_name}x{message.num}'
               f' （{message.coin_type}瓜子x{message.total_coin}）')
+
 
 def process_danmu(danmu_msg):
     # 处理弹幕消息的函数
@@ -75,7 +81,9 @@ def process_danmu(danmu_msg):
         await ai.tts(danmu_msg)  # 使用 await 调用 tts
         ai_response_content = ai.run(danmu_msg)  # 调用 AI 回复
         await ai.tts(ai_response_content)  # 再次使用 await 调用 tts
+
     return process()
+
 
 class Ai_Awnsers:
     def __init__(self):
@@ -89,12 +97,14 @@ class Ai_Awnsers:
         response = client.chat.completions.create(
             model="qwen-turbo-latest",
             messages=[
-                {"role": "system", "content": "你是一个对人类有帮助的ai智能助手,请你将每个回答都控制在20字以内"},
+                {"role": "system",
+                 "content": "你的名字叫做星语，是一个对人类有帮助的ai智能助手,请你将每个回答都控制在50字以内"},
                 {"role": "user", "content": f"{self.chat_msg}"},
             ],
             max_tokens=1024,
             temperature=0.7,
-            stream=False
+            stream=False,
+
         )
 
         print(response.choices[0].message.content)
@@ -144,8 +154,8 @@ class Ai_Awnsers:
             # 确保资源释放
             pygame.mixer.quit()
 
-ai = Ai_Awnsers()
 
+ai = Ai_Awnsers()
 
 
 async def main():
@@ -156,6 +166,7 @@ async def main():
         await session.close()
         # 确保所有任务完成后再退出
         await asyncio.sleep(0.5)
+
 
 if __name__ == '__main__':
     asyncio.run(main())
