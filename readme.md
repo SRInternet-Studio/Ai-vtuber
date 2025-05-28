@@ -31,6 +31,7 @@ pip install -r requirements.txt
 - 5.修改和风天气apikey（详询b站教程（随便搜和风天气就能看到））
 - 6.到bilibili开播
 - 7.配置完毕！
+- 8.在根目录下创建一个temp目录
 
 
 [python]: https://img.shields.io/badge/Python-3.12+-blue.svg?labelColor=black
