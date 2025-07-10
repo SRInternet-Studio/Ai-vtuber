@@ -17,21 +17,7 @@
 **造好的轮子**
 - [blivedm](https://github.com/xfgryujk/blivedm)
 
-### 如何使用: Hou To Use:
-- 1.clone 本储存库代码到本地
-```
-git clone https://github.com/MacroSTAR-MS/ai_vtuber.git
-```
-- 2.安装依赖
-```
-pip install -r requirements.txt
-```
-- 3.修改main.py中的直播间id，SESSDATA和阿里云百炼的api key（也可更换为其他支持OpenAI SDK调用的API）
-- 4.修改edgetts音色（Ai_Awnsers中的self.edgetts_voice）
-- 5.修改和风天气apikey（详询b站教程（随便搜和风天气就能看到））
-- 6.到bilibili开播
-- 7.配置完毕！
-- 8.在根目录下创建一个temp目录
+使用教程详见wiki
 
 
 [python]: https://img.shields.io/badge/Python-3.12+-blue.svg?labelColor=black
