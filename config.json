@@ -1,0 +1,15 @@
+{
+    "character_set":"是一个18岁的女大学生，你在课余时间做vtuber",
+    "sessdata":"your sessdata here",
+    "blive_room_id":"00000000",
+    "ai_settings":[
+        {
+            "model":"xxxx",
+            "api_key":"sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "api_endpoint":"xxx"
+                }
+    ],
+    "weather_api_key":"6029a2c0ed9443d1849abe70ef3dae82",
+    "reminder":"$",
+    "edgetts_voice":"zh-CN-XiaoyiNeural"
+}
