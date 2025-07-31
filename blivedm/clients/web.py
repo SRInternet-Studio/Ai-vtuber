@@ -199,14 +199,20 @@ class BLiveClient(ws_base.WebSocketClientBase):
         return True
 
     async def _init_host_server(self):
+        # 引入WBI签名
+        from .. import wbi
         try:
+            # 获取wbi key
+            img_key, sub_key = await wbi.get_wbi_keys(self._session)
+            params = {
+                'id': self._room_id,
+                'type': 0
+            }
+            params = wbi.wbi_sign(params, img_key, sub_key)
             async with self._session.get(
                 DANMAKU_SERVER_CONF_URL,
                 headers={'User-Agent': utils.USER_AGENT},
-                params={
-                    'id': self._room_id,
-                    'type': 0
-                },
+                params=params,
             ) as res:
                 if res.status != 200:
                     logger.warning('room=%d _init_host_server() failed, status=%d, reason=%s', self._room_id,
