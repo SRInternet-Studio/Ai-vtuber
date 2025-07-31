@@ -20,17 +20,17 @@
 
 
 [python]: https://img.shields.io/badge/Python-3.12+-blue.svg?labelColor=black
-[github-contributors-link]: https://github.com/MacroSTAR-MS/Ai_Vtuber/graphs/contributors
-[github-contributors-shield]: https://img.shields.io/github/contributors/MacroSTAR-MS/Ai_Vtuber?color=c4f042&labelColor=black&style=flat-square
-[github-forks-link]: https://github.com/MacroSTAR-MS/Ai_Vtuber/network/members
-[github-forks-shield]: https://img.shields.io/github/forks/MacroSTAR-MS/Ai_Vtuber?color=8ae8ff&labelColor=black&style=flat-square
-[github-issues-link]: https://github.com/MacroSTAR-MS/Ai_Vtuberr/issues
-[github-issues-shield]: https://img.shields.io/github/issues/MacroSTAR-MS/Ai_Vtuber?color=ff80eb&labelColor=black&style=flat-square
-[github-license-link]: https://github.com/MacroSTAR-MS/Ai_Vtuber/blob/main/LICENSE
-[github-license-shield]: https://img.shields.io/github/license/MacroSTAR-MS/Ai_Vtuber
+[github-contributors-link]: https://github.com/SRInternet-Studio/Ai-vtubergraphs/contributors
+[github-contributors-shield]: https://img.shields.io/github/contributors/SRInternet-Studio/Ai-vtuber?color=c4f042&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/SRInternet-Studio/Ai-vtubernetwork/members
+[github-forks-shield]: https://img.shields.io/github/forks/SRInternet-Studio/Ai-vtuber?color=8ae8ff&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/SRInternet-Studio/Ai-vtuberr/issues
+[github-issues-shield]: https://img.shields.io/github/issues/SRInternet-Studio/Ai-vtuber?color=ff80eb&labelColor=black&style=flat-square
+[github-license-link]: https://github.com/SRInternet-Studio/Ai-vtuberblob/main/LICENSE
+[github-license-shield]: https://img.shields.io/github/license/SRInternet-Studio/Ai-vtuber
 [github-release-link]: https://github.com/Ikaros-521/AI-Vtuber/releases
-[github-release-shield]: https://img.shields.io/github/v/release/MacroSTAR-MS/Ai_Vtuber?color=369eff&labelColor=black&logo=github&style=flat-square
-[github-releasedate-link]: https://github.com/MacroSTAR-MS/Ai_Vtuber/releases
-[github-releasedate-shield]: https://img.shields.io/github/release-date/MacroSTAR-MS/Ai_Vtuber?labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/MacroSTAR-MS/Ai_Vtuber/network/stargazers
-[github-stars-shield]: https://img.shields.io/github/stars/MacroSTAR-MS/Ai_Vtuber?color=ffcb47&labelColor=black&style=flat-square?color=white&labelColor=black&style=flat-square
+[github-release-shield]: https://img.shields.io/github/v/release/SRInternet-Studio/Ai-vtuber?color=369eff&labelColor=black&logo=github&style=flat-square
+[github-releasedate-link]: https://github.com/SRInternet-Studio/Ai-vtuberreleases
+[github-releasedate-shield]: https://img.shields.io/github/release-date/SRInternet-Studio/Ai-vtuber?labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/SRInternet-Studio/Ai-vtubernetwork/stargazers
+[github-stars-shield]: https://img.shields.io/github/stars/SRInternet-Studio/Ai-vtuber?color=ffcb47&labelColor=black&style=flat-square?color=white&labelColor=black&style=flat-square
