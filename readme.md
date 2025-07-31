@@ -10,7 +10,6 @@
 [![][github-contributors-shield]][github-contributors-link]
 [![][github-license-shield]][github-license-link]
 
-由 *宏星工作室-桃子* 研发的AI Vtuber直播框架
 </div>
 
 ## 鸣谢
